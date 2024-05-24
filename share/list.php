@@ -30,7 +30,7 @@
 
   // Print table
 
-  echo "<table class=\"table\">\n<tr><th scope=\"col\">Control</th><th scope=\"com\">Punched</th></tr>\n";
+  echo "<table class=\"table\">\n<tr><th scope=\"col\">!control!</th><th scope=\"com\">!punched!</th></tr>\n";
     
   foreach ($trans as $t) {
     if ($t["punched"]) {
@@ -46,7 +46,7 @@
     } else {
       echo "<tr class=\"table-light\"><th scope=\"row\">";
       echo $t["name"];
-      echo "</th><td>Kvar att hitta.</td></tr>\n";
+      echo "</th><td>!ltf!</td></tr>\n";
     }
   }
   echo "</table>\n";
@@ -56,6 +56,6 @@
     $datetime1 = new DateTime($_SESSION["start"]);
     $datetime2 = new DateTime($_SESSION["finish"]);
     $interval = $datetime1->diff($datetime2);
-    echo "<h2>Totaltid: ".$interval->format('%H:%i')."</h2>\n";
+    echo "<h2>!tottid! ".$interval->format('%H:%i')."</h2>\n";
   }
 ?>

@@ -7,8 +7,8 @@
         <div class="card-body">
           <form class="was-validated" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <div class="form-row">
-              <div class="col-12 col-md-9 mb-2 mb-md-0"><input class="form-control form-control-lg" type="text" name="ident" placeholder="User code" /></div>
-              <div class="col-12 col-md-3"><button class="btn btn-primary btn-lg" type="submit">Send</button></div>
+              <div class="col-12 col-md-9 mb-2 mb-md-0"><input class="form-control form-control-lg" type="text" name="ident" placeholder="!usercode!" /></div>
+              <div class="col-12 col-md-3"><button class="btn btn-primary btn-lg" type="submit">!send!</button></div>
             </div>
           </form>
         </div>

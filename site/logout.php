@@ -37,6 +37,6 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
-    <h1>Session closed</h1>
+    <h1>!sessclosed!</h1>
     </body>
 </html>

@@ -62,9 +62,9 @@
                                   <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
                                       <a class="btn btn-primary btn-lg px-5 py-3 me-sm-3 fs-6 fw-bolder" href="start.php">
 				      <?php if ($_SESSION["finished"]) { ?>
-				        Clean up and restart.
+				        !cleanup!
 				      <?php } else { ?>
-				        Start
+				        !start!
 				      <?php } ?>
 				      </a>
                                   </div>
@@ -79,7 +79,7 @@
 
                         </div>
                         <div class="col-xxl-7">
-                            <img class="profile-img" width=40%" src="assets/profile.png" alt="Foxhunt" />
+                            <img class="profile-img" width=40%" src="assets/profile.png" alt="!altimgtext!" />
                             <!-- Header profile picture-->
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                             <div class="text-center my-5">
                                 <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">ARDF light</span></h2>
                                 <p class="lead fw-light mb-4">Instruktioner:</p>
-                                <p class="text-muted">Use the phone QR-kode reader to start, punch controls och puch finish.</p>
+                                <p class="text-muted">!instruction!</p>
                                 <div class="d-flex justify-content-center fs-2 gap-4">
                                     <a class="text-gradient" href="#!"><i class="bi bi-twitter"></i></a>
                                     <a class="text-gradient" href="#!"><i class="bi bi-linkedin"></i></a>

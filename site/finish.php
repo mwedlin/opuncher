@@ -14,7 +14,7 @@
 
   if (! $_SESSION["running"]) {
     // Already stopped.
-    $_SESSION["status"] = "Not started.";
+    $_SESSION["status"] = "!nostart!";
   } else {
     //
     // We are running, stop the current game.
@@ -28,7 +28,7 @@
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
-    $_SESSION["status"] = "Finished OK!";
+    $_SESSION["status"] = "!finok!";
   }
 
 ?>
@@ -53,6 +53,6 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
-    <h1>Session closed</h1>
+    <h1>!sessclosed!</h1>
     </body>
 </html>

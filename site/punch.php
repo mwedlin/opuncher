@@ -5,7 +5,7 @@
 
   // Validate that we have logged in
   if (! $_SESSION["valid_user"]) {
-    $_SESSION["status"] = "Please log in";
+    $_SESSION["status"] = "!status01!";
     header('Location: /');
     exit;
   }
@@ -36,14 +36,14 @@
 
   // Check that we are running
   if (! $_SESSION["running"]) {
-    $_SESSION["status"] = "Punch failed, not logged in.";
+    $_SESSION["status"] = "!status02!";
     header('Location: /');
     exit;
   }
   
   // Validate punch code
   if (empty($punch_in)) {
-    echo "Give parameter for punch.";
+    echo "!param!";
     exit;
   } else {
     // Prepare a select statement
@@ -83,12 +83,12 @@
 	      $punch_valid = True;
             } else {
 	      $punch_valid = False;
-              $_SESSION["status"] = "Punch not logged, wrong game.!";
+              $_SESSION["status"] = "!status03!";
             }
           }
         } else {
 	  $punch_valid = False;
-          $_SESSION["status"] =  "Punch not logged, wrong code!";
+          $_SESSION["status"] =  "!status04!";
         }
       } else {
 	$punch_valid = False;        
@@ -108,12 +108,12 @@
           $stmt = mysqli_prepare($link, $sql);
           mysqli_stmt_bind_param($stmt, "ii", $_SESSION["id"], $id );
           if (mysqli_stmt_execute($stmt)) {
-            $_SESSION["status"] = "Punch OK!";
+            $_SESSION["status"] = "!status05!";
           } else {
             $_SESSION["status"] = "Stämpling misslyckades!";
           }
 	} else { // Already checked in.
-           $_SESSION["status"] = "Already punched that control!";
+           $_SESSION["status"] = "!status06!";
         }
         mysqli_stmt_close($stmt);
        }
@@ -143,6 +143,6 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body>
-    <h1>Session closed</h1>
+    <h1>!sessclosed!</h1>
     </body>
 </html>
